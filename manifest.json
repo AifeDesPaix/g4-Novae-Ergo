@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+  "name": "vive les teubs",
+  "description": "Salut je suce",
+  "version": "1.0",
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.novae.info/*"],
+      "css": ["novae.css", "font-awesome-4.7.0/css/font-awesome.min.css"],
+      "js": ["jquery.js", "novae.js"],
+      "run_at" : "document_start"
+    }
+  ],
+  "permissions": [
+    "tabs", "https://www.novae.info/*", "storage"
+  ]
+}
